@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  text-decoration: none;
+  list-style: none;
+  transition: .2s linear;
+  font-family: 'poppins';
+  scroll-behavior: smooth;
+  scroll-padding-top:4rem;
+  margin: 0;
+}
+
+:root {
+  --orange-clr: #e67e22;
+  --black-clr: #130f40;
+  --white-clr: #fff;
+  --light-clr:#666;
+  --light-bck:#eee;
+  --border: .2rem solid #130f40;
+  --border-white: .2rem solid #fff;
+  --boxShadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white-clr);
+  box-shadow: var(--boxShadow);
+  padding: 1em 0em;
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 1000;
+}
+
+.headerLogo{
+  gap: .4em;
+  color: var(--black-clr);
+  cursor: pointer;
+}
+
+.headerLogo:hover{
+  color:var(--orange-clr)
+}
+
+.menuItemList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menuItem{
+  margin: 2rem;
+  color: var(--black-clr);
+  cursor: pointer;
+}
+
+.menuItem:hover{
+  color: var(--orange-clr);
+}
