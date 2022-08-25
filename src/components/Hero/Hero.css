@@ -1,0 +1,51 @@
+.heroBox{
+    background-image: url(../../../public/assets/heroImage.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2em;
+    margin-top: 6%;
+  }
+  
+  .greetingBox{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 500px;
+  }
+  
+  .clrAccent{
+    color: var(--orange-clr);
+  }
+  
+  .greetingText{
+    font-size: 3rem;
+    color: var(--white-clr);
+    line-height: 1.5em;
+    text-transform: capitalize;
+  }
+  
+  .btn{
+    margin-top: 1rem;
+    padding: .8rem 2.8rem;
+    border-radius: 5rem;
+    border-top-left-radius: 0rem;
+    cursor: pointer;
+    background:none;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    border: var(--border);
+    color: var(--black-clr);
+  }
+  
+  .btn:hover{
+    background-color: var(--black-clr);
+    color: var(--light-bck);
+
+  }
+  
