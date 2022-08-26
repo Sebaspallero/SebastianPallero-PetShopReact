@@ -1,5 +1,6 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
+import ItemList from '../ItemList/ItemList'
 
 const Brand = ({name})=>{
     return(
@@ -12,6 +13,7 @@ const ItemListContainer = () => {
     <div>
         <p className='ItemGreeting'>Te damos la bienvenida a <Brand name="Patitas"/></p>
         <ItemCount/>
+        <ItemList/>
     </div>
   )
 }
