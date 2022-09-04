@@ -9,10 +9,19 @@ const Brand = ({name})=>{
 }
 
 const ItemListContainer = () => {
+
+  const onAdd=(value)=>{
+    if(value>0){
+      alert(`Se han agregado ${value} producto/s`)
+  }
+  else{
+      alert('No ha seleccionado ninguna cantidad')
+  }}
+
   return (
     <div>
         <p className='ItemGreeting'>Te damos la bienvenida a <Brand name="Patitas"/></p>
-        <ItemCount/>
+        <ItemCount initial={0} stock={10} onAdd={onAdd}/>
         <ItemList/>
     </div>
   )

@@ -12,7 +12,7 @@ const ItemList = () => {
       return new Promise((resolve,reject)=>{
         if(productsData.length != 0){
           setTimeout(()=>{
-            return resolve (productsData),5000})
+            return resolve (productsData)},3000)
         } 
         else{
           return reject('No hay Productos')
