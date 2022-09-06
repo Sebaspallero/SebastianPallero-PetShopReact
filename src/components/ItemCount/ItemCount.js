@@ -22,9 +22,9 @@ const ItemCount = ({stock,initial,onAdd}) => {
     return (
         <div className='counterBox'>
             <div className='itemCounter'>
-                <button onClick={substract}>-</button>
+                <button className='btnsAdd' onClick={substract}>-</button>
                 <div>{value}</div>   
-                <button onClick={add}>+</button>
+                <button className='btnsAdd' onClick={add}>+</button>
             </div>
             <button onClick={quantity} className='btn'>Agregar al carrito</button>
         </div>

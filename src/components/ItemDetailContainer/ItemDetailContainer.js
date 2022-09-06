@@ -3,28 +3,67 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
 
+
 const ItemDetailContainer = () => {
-
-  const [product,setProduct] = useState([]);
-  let {id} = useParams();
-
-  useEffect(()=>{
-    axios.get(`https://api.jsonbin.io/v3/b/631549f9e13e6063dc9b4ee0/${id}`,
-     {
-      headers: {"X-Master-Key":"$2b$10$P0mEBR9V68/Q6mKID4J7tO7G1NpEwoSXl.r2v..rdqNM.xj6By4rK"}
-     })
-     .then((res)=> setProduct(res.data.record))
-  },[id])
+  const {id} = useParams();
+  const productsData = [
+    {
+        id:1,
+        title:'New Zealand - Pollo',
+        price:1350,
+        img_url:"/assets/producto1.jpg"
+    },
+    {
+        id:2,
+        title:'New Zealand - Carne',
+        price:1500,
+        img_url:"/assets/producto2.jpg"
+    },
+    {
+        id:3,
+        title:'New Zealand - Cordero',
+        price:1600,
+        img_url:"/assets/producto3.jpg"
+    },
+    {
+        id:4,
+        title:'New Zealand - Snack Carne',
+        price:1200,
+        img_url:"/assets/producto4.jpg"
+    },
+    {
+        id:5,
+        title:'New Zealand - Snack Ciervo',
+        price:1400,
+        img_url:"/assets/producto5.jpg"
+    },
+    {
+        id:6,
+        title:'New Zealand - Salmon',
+        price:1400,
+        img_url:"/assets/producto6.jpg"
+    },
+    {
+        id:7,
+        title:'New Zealand - Carne Premuim',
+        price:1700,
+        img_url:"/assets/producto7.jpg"
+    },
+    {
+        id:8,
+        title:'New Zealand - Pescado',
+        price:1200,
+        img_url:"/assets/producto8.jpg"
+    }
+]
 
   return (
     <div>
-      {product.map(details=>{
-        return(
-          <div key={product.id}>
-              <ItemDetail data={details}/>
-          </div>
-        )
-      })}
+      {productsData.filter(product=>product.id==id).map((product)=>(
+        <div key={product.id}>
+          <ItemDetail data={product}/>
+        </div>
+      ))}
     </div>
   )
 }

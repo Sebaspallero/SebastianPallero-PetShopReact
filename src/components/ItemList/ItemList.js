@@ -19,6 +19,11 @@ const ItemList = () => {
      .then((res)=> setProducts(res.data.record))
   },[])
 
+  
+  /* useEffect(()=>{
+    axios.get('products.json')
+     .then((res)=> setProducts(res.data))
+  },[]) */
 
   return (
     <div className='productsBox'>
