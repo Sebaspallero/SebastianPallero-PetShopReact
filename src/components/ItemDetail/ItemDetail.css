@@ -1,0 +1,34 @@
+.itemDetailBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.itemDetailImg{
+    padding-right: 3em;
+}
+
+.ItemDetailTextBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em;
+}
+
+.itemDetailTitle{
+    color: var(--black-clr);
+    margin-bottom: 1em;
+}
+
+.itemDetailPrice{
+    color: var(--orange-clr);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.ietmDetailDescription{
+    color: var(--black-clr);
+    margin-bottom: .5em;
+    max-width: 350px;
+}
