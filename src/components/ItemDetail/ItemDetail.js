@@ -21,7 +21,7 @@ const ItemDetail = ({data}) => {
         <div className='ItemDetailTextBox'>
             <h2 className='itemDetailTitle'>{data.title}</h2>
             <p className='itemDetailPrice'>${data.price}</p>
-            <p className='ietmDetailDescription'>We've developed simple RESTful APIs which will seamlessly integrate with new or existing web and mobile applications in no time. The data you stored can be secured using a Private key that other users cannot access.</p>
+            <p className='ietmDetailDescription'>{data.description}</p>
             <ItemCount initial={0} stock={10} onAdd={onAdd}/>
        </div>
        

@@ -3,16 +3,18 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { fetchData } from '../../products'
 
+
 const ItemDetailContainer = () => {
   const [product,setProduct]= useState([])
   const {id} = useParams();
 
-useEffect(()=>{
-  fetchData
-  .then((res)=>setProduct(res.find( product=>product.id == {id} /* 1 Si se pude pasar un valor numerico */ )))
-  .catch(err=>console.log(err))
-},[])
-
+  useEffect(()=>{
+    const data = fetchData
+    if(id){
+      data.then(res=>setProduct(res.find(prod=>prod.id==id)));
+    }
+  },[id])
+  
   return (
           <div>
             <ItemDetail data = {product}/>
@@ -22,8 +24,3 @@ useEffect(()=>{
 
 export default ItemDetailContainer
 
-{/* {productsData.filter(product=>product.id==id).map((product)=>(
-        <div key={product.id}>
-          <ItemDetail data={product}/>
-        </div>
-      ))} */}
