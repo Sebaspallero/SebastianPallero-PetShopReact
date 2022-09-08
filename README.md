@@ -1,3 +1,9 @@
+-Proyecto de React, E-commerce de un Pet-Shop, realizado por Sebastián Pallero.
+-Se utilizó CSS nativo para los estilos, con un diseño de la web original.
+-Se instaló FontAwesome para los iconos. 
+-La idea del proyecto era crear una web rapida, moderna y vistosa, utilizando React para lograr el objetivo de 
+realizar una SPA, dandole la mayor cantidad de funcionaldades reales al proyetco, con el uso de APIS y librerias.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
