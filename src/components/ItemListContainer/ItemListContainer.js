@@ -10,7 +10,7 @@ const Brand = ({name})=>{
 const ItemListContainer = () => {
   return (
     <div>
-        <p className='ItemGreeting'>Te damos la bienvenida a <Brand name="Patitas"/></p>
+        <h3 className='ItemGreeting'>Nuestros <Brand name="Productos"/></h3>
         <ItemList/>
     </div>
   )

@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 
 //VIEWS
 import Home from './views/Home/Home';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from './views/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {
   return (

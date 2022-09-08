@@ -13,7 +13,7 @@ const NavBar = ()=> {
                 </div>
                 <div>
                     <ul className="menuItemList">
-                        <li className="menuItem">HOME</li>
+                        <Link to={'/'} className="menuItem">HOME</Link>
                         <li className="menuItem">PRODUCTOS</li>
                         <li className="menuItem">NOSOTROS</li>
                         <li className="menuItem">CONTACTO</li>
