@@ -4,9 +4,11 @@ import { useParams } from 'react-router-dom'
 import { fetchData } from '../../products'
 
 
+
 const ItemDetailContainer = () => {
   const [product,setProduct]= useState([])
   const {id} = useParams();
+  
 
   useEffect(()=>{
     const data = fetchData

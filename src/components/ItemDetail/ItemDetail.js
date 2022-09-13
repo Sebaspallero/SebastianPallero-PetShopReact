@@ -1,15 +1,20 @@
 import React,{useState} from 'react'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { useCartContext } from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
 
 const ItemDetail = ({data}) => {
   
-  const[goToCart,setGoToCart]=useState(false)
+  const[goToCart,setGoToCart]=useState(false);
+
+  const {addProduct} = useCartContext()
 
   const onAdd=(value)=>{
-    value > 0 ? setGoToCart(true) : alert('No ha seleccionado ninguna cantidad')
+    value > 0 ? setGoToCart(true) : alert('No ha seleccionado ninguna cantidad');
+    addProduct(data, value)
   }
+
 
   return (
     <div className='itemDetailBox'>
@@ -25,8 +30,6 @@ const ItemDetail = ({data}) => {
               goToCart ? <Link to='/cart'> <button className='btn'>Terminar Compra</button></Link> : <ItemCount initial={0} stock={10} onAdd={onAdd}/>
             }
        </div>
-       
-        
     </div>
   )
 }

@@ -1,9 +1,10 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import Item from '../Item/Item'
 import './ItemList.css'
 import { fetchData } from '../../products'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+
 
 
 const ItemList = () => {
