@@ -41,13 +41,4 @@
     color: var(--orange-clr);
   }
   
-  .cartIcon{
-    height: 1.5em;
-    width: 1.5em;
-    color:var(--black-clr);
-    cursor: pointer;
-  }
-  
-  .cartIcon:hover{
-    color: var(--orange-clr);
-  }
+ 

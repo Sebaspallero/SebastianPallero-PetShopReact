@@ -11,11 +11,11 @@ const CartProvider= ({children}) => {
 
     const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
     
-    const removeProduct = (id)=> setCart(cart.filter(product => product.od !== id));
+    const removeProduct = (id)=> setCart(cart.filter(product => product.id !== id));
 
     const addProduct = (item, newQuantity)=>{
       const newCart = cart.filter(product => product.id !== item.id);
-      newCart.push({...item, 'quantity:': newQuantity});
+      newCart.push({...item, quantity: newQuantity});
       setCart(newCart)
     };
 
@@ -23,7 +23,7 @@ const CartProvider= ({children}) => {
 
 
   return (
-      <cartContext.Provider value={{clearCart,isInCart,removeProduct,addProduct}}>
+      <cartContext.Provider value={{clearCart,isInCart,removeProduct,addProduct,cart}}>
         {children}
       </cartContext.Provider>
   )

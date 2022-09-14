@@ -1,0 +1,9 @@
+.cartIcon{
+    font-size: 1.7em;
+    color:var(--black-clr);
+    cursor: pointer;
+  }
+  
+  .cartIcon:hover{
+    color: var(--orange-clr);
+  }

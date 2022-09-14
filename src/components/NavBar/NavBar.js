@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget.js";
+import CartWidget from "../CartWidget/CartWidget";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaw } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";

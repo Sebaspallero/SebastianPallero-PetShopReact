@@ -1,0 +1,52 @@
+.cartViewBox{
+    position: absolute;
+    top: -40%;
+    right: 2%;
+    margin-top: 10em;
+    background-color: var(--white-clr);
+    width: 380px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    color: var(--black-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x:hidden;
+  }
+
+  .cartView{
+    padding: 1.5em;
+    gap: 1em;
+  }
+
+  .cartViewProduct{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.8em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .cartViewImg{
+    width: 80px;
+    height: 100px;
+  }
+
+  .cartViewText{
+    text-align: center;
+    width: 118px;
+    color: var(--black-clr);
+  }
+
+  .titleAccent{
+    color: var(--orange-clr);
+  }
+
+  .cartViewDeleteBtn{
+    font-size: 1.3em;
+    color: red;
+    cursor: pointer;
+  }
