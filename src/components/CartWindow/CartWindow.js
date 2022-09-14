@@ -7,6 +7,7 @@ import { useCartContext } from '../../Context/CartContext'
 const CartWindow = () => {
 
     const { cart } = useCartContext()
+   /*  const {removeProduct} = useCartContext() */
     console.log ('carrito Window:',cart)
 
   return (
@@ -22,7 +23,7 @@ const CartWindow = () => {
                           <img className='cartViewImg' src={product.img_url} alt={product.title}></img>
                           <p className='cartViewText'>{product.title}</p>
                           <p>X {product.quantity}</p>
-                          <span className='cartViewDeleteBtn'><FontAwesomeIcon icon={faXmark} /></span>
+                          <span className='cartViewDeleteBtn' /* onClick={removeProduct(product.id)} */><FontAwesomeIcon icon={faXmark} /></span>
                       </div>
                       <button className='btn'>Finalizar Compra</button>
                       </>)})}
