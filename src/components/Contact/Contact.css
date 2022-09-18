@@ -47,3 +47,16 @@
   .titleAccent{
     color: var(--orange-clr);
   }
+
+  /* ----------------------------------- MEDIA QUERY --------------------------------------- */
+
+ @media (max-width: 600px){
+    .contactBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+
+ }

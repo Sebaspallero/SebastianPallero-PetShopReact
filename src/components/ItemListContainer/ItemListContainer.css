@@ -1,0 +1,35 @@
+.brandName{
+    color: var(--orange-clr);
+    font-size: 2rem;
+  }
+  
+  .ItemGreeting{
+    gap: 0.3em;
+    font-size: 2rem;
+    color: var(--black-clr);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .categorySelectorBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+  }
+  
+  /* ------------------------- MEDIA QUERY ------------------------------------ */
+
+@media (max-width: 600px){
+
+    .categorySelectorBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+      }
+}

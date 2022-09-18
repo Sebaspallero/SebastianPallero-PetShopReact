@@ -1,17 +1,18 @@
-import React,{useState,useEffect,useContext} from 'react'
+import React,{useState,useEffect} from 'react'
 import Item from '../Item/Item'
-import './ItemList.css'
 import { fetchData } from '../../products'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import './ItemList.css'
 
 
 
 const ItemList = () => {
 
   const [products,setProducts] = useState([]);
-  const {category} = useParams()
 
+  const {category} = useParams()
+ 
   useEffect(()=>{
     if(!category){
       fetchData

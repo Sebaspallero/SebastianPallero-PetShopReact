@@ -8,7 +8,7 @@ const Item = ({data}) => {
           <img className='itemImg' src={data.img_url} alt='Imagen de Producto'></img>
         </div>
         <h3 className='itemTitle'>{data.title}</h3>
-        <p className='itemPrice'>$ {data.price}</p>
+        <p className='itemPrice'>$ {data.price.toLocaleString()}</p>
     </div>
   )
 }

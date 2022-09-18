@@ -1,15 +1,14 @@
 import React from 'react'
 import './CartWindow.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faXmark,faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useCartContext } from '../../Context/CartContext'
+import { Link } from 'react-router-dom'
 
 const CartWindow = () => {
 
-    const { cart } = useCartContext()
-   /*  const {removeProduct} = useCartContext() */
-    console.log ('carrito Window:',cart)
-
+  let { cart, totalPrice,removeProduct, clearCart } = useCartContext()
+  
   return (
     <div className='cartViewBox'>
         <div className='cartView'>
@@ -21,15 +20,21 @@ const CartWindow = () => {
                     <>
                       <div className='cartViewProduct' key={product.id}>
                           <img className='cartViewImg' src={product.img_url} alt={product.title}></img>
-                          <p className='cartViewText'>{product.title}</p>
-                          <p>X {product.quantity}</p>
-                          <span className='cartViewDeleteBtn' /* onClick={removeProduct(product.id)} */><FontAwesomeIcon icon={faXmark} /></span>
-                      </div>
-                      <button className='btn'>Finalizar Compra</button>
-                      </>)})}
+                          <div className='cartViewTextBox'>
+                            <p className='cartViewText'>{product.title}</p>
+                            <p className='cartViewText'>${product.price.toLocaleString()}</p>
+                          </div>
+                          <p>x {product.quantity}</p>
+                          <span className='cartViewDeleteBtn' onClick={()=>removeProduct(product.id)}><FontAwesomeIcon icon={faXmark} /></span>
+                        </div>
+                      </>
+                      )})}
+                      <p style={{marginBottom:'30px'}}>Total: ${totalPrice(cart).toLocaleString()}</p>
+                      <Link to={'/cart'} className='btn'>Finalizar Compra</Link>
+                      <FontAwesomeIcon onClick={()=>clearCart()} className='cartViewDeleteAll' icon={faTrash} />
                 </div>
-                : <p style={{marginTop:'80px',marginLeft:'80px',marginBottom:'30px'}}>Su Carrito está Vacio</p>
-                }
+                : <p className='cartMsgEmpty'>Tu Carrito está Vacío</p>
+              }
         </div>
     </div>
   )

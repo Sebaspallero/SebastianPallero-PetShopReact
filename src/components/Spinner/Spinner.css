@@ -1,3 +1,17 @@
-.spinnerColor{
-    color: var(--orange-clr);
+.spinnerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinnerText{
+    color: var(--black-clr);
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+.spinnerImg{
+    width: 80px;
+    height: 80px;
 }

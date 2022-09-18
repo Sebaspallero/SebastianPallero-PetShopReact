@@ -6,6 +6,7 @@ import Contact from '../../components/Contact/Contact.js';
 
 
 
+
 const Home = () => {
   return (
     <div>

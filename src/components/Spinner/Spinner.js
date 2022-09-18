@@ -1,13 +1,12 @@
 import React from 'react'
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 import './Spinner.css'
 
 const Spinner = () => {
   return (
-    <Box sx={{ display: 'flex'}}>
-      <CircularProgress className='spinnerColor'/>
-    </Box>
+    <div className='spinnerBox'>
+      <p className='spinnerText'>Espere un momento...</p>
+      <img className='spinnerImg' src='/assets/spinner.gif'></img>
+    </div>
   )
 }
 

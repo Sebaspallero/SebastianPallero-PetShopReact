@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ItemList from '../../components/ItemList/ItemList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDog,faCat, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import './ItemListContainer.css'
 
 
 const Brand = ({name})=>{

@@ -1,6 +1,7 @@
 .navBar{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: var(--white-clr);
@@ -41,4 +42,21 @@
     color: var(--orange-clr);
   }
   
- 
+ /* ----------------------------------- MEDIA QUERY --------------------------------------- */
+
+ @media (max-width: 600px){
+
+  .navBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white-clr);
+    box-shadow: var(--boxShadow);
+    padding: .2em 0em;
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+  }
+
+ }

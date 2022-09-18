@@ -1,5 +1,8 @@
 import React from 'react'
 import './Footer.css'
+import { faFacebookF,faInstagram,faTwitter,faLinkedin,faGithub } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const Footer = () => {
   return (
@@ -11,11 +14,11 @@ const Footer = () => {
       </div>
     <div className='footerBox'>
         <ul className='socialBox'>
-            <li className='socialItem'>Twitter</li>
-            <li className='socialItem'>Facebook</li>
-            <li className='socialItem'>Instagram</li>
-            <li className='socialItem'>Linkedin</li>
-            <li className='socialItem'>GitHub</li>
+            <a href='https://twitter.com/' target="_blank" className='socialItem'><FontAwesomeIcon className='brandFooter' icon={faTwitter} />Twitter</a>
+            <a href='https://es-la.facebook.com/' target="_blank" className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faFacebookF} /> Facebook</a>
+            <a href='https://www.instagram.com/' target="_blank" className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faInstagram} />Instagram</a>
+            <a href='https://www.linkedin.com/in/sebastian-pallero-or%C3%ADa-a911591a1/' target="_blank"  className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faLinkedin} />Linkedin</a>
+            <a href='https://github.com/Sebaspallero' target="_blank"  className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faGithub} />GitHub</a>
         </ul>
     </div>
     </div>

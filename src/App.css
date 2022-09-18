@@ -49,28 +49,3 @@
   border: var(--border);
   color: var(--black-clr);
 }
-
-
-/* ------------------------------- */
-.brandName{
-  color: var(--orange-clr);
-  font-size: 2rem;
-}
-
-.ItemGreeting{
-  gap: 0.3em;
-  font-size: 2rem;
-  color: var(--black-clr);
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: center;
-  margin: 1em;
-}
-
-.categorySelectorBox{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2em;
-}
