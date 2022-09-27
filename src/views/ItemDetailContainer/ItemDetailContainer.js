@@ -4,32 +4,20 @@ import { useParams } from 'react-router-dom'
 import { fetchData } from '../../products'
 
 //FIREBASE
-import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from '../../Firebase/firebaseConfig'
+import { getFirestore,getDoc,doc } from "firebase/firestore"
 
 
 
 const ItemDetailContainer = () => {
   const [product,setProduct]= useState([])
-  const [products,setProducts] = useState([]);
-  const {id} = useParams();
 
-  
-  const getProducts = async () =>{
-    const q = query(collection(db, "products"));
-    const docs = [];
-    const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) => {
-        docs.push({...doc.data(), id:doc.id})
-    });
-    setProducts(docs)
-  }
+  const {id} = useParams();
   
   useEffect(()=>{
-    getProducts()
-    if(id){
-      setProduct(products.find(prod=>prod.id==id));
-    }
+    const querydb = getFirestore();
+    const querydoc = doc(querydb, 'products', id);
+    getDoc(querydoc)
+      .then(res=> setProduct({id:res,id, ...res.data()}))
   },[id])
   
   return (
