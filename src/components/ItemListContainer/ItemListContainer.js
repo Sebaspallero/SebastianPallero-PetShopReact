@@ -14,7 +14,7 @@ const Brand = ({name})=>{
 
 const ItemListContainer = () => {
   return (
-    <div>
+    <div id='productos' style={{paddingTop:'20px'}}>
         <h2 className='ItemGreeting'>Nuestros <Brand name="Productos"/></h2>
         <div className='categorySelectorBox'>
           <Link to='/' className="btn"> TODO <FontAwesomeIcon  icon={faShoppingCart} /></Link>

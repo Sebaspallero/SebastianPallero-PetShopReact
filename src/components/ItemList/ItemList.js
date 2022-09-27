@@ -5,15 +5,33 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import './ItemList.css'
 
+//FIREBASE
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from '../../Firebase/firebaseConfig'
+
 
 
 const ItemList = () => {
 
   const [products,setProducts] = useState([]);
 
-  const {category} = useParams()
- 
+  const getProducts = async () =>{
+    const q = query(collection(db, "products"));
+    const docs = [];
+    const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({...doc.data(), id:doc.id})
+    });
+    setProducts(docs)
+  }
+
   useEffect(()=>{
+    getProducts()
+  },[])
+
+ /*  const {category} = useParams() */
+ 
+  /* useEffect(()=>{
     if(!category){
       fetchData
        .then((resp)=>setProducts(resp))
@@ -24,7 +42,7 @@ const ItemList = () => {
       .then(res=>setProducts(res.filter(prod=>prod.category==category)))
       .catch(err=>console.log(err))
     }
-  },[category])
+  },[category]) */
 
   return (
      <div className='productsBox'>
