@@ -17,7 +17,6 @@ const CartWindow = () => {
               <div>
                 {cart.map((product)=>{
                   return(
-                    <>
                       <div className='cartViewProduct' key={product.id}>
                           <img className='cartViewImg' src={product.img_url} alt={product.title}></img>
                           <div className='cartViewTextBox'>
@@ -27,7 +26,6 @@ const CartWindow = () => {
                           <p>x {product.quantity}</p>
                           <span className='cartViewDeleteBtn' onClick={()=>removeProduct(product.id)}><FontAwesomeIcon icon={faXmark} /></span>
                         </div>
-                      </>
                       )})}
                       <p style={{marginBottom:'30px'}}>Total: ${totalPrice(cart).toLocaleString()}</p>
                       <Link to={'/cart'} className='btn'>Finalizar Compra</Link>

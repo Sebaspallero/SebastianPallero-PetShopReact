@@ -1,4 +1,4 @@
-.cartBox{
+.cartProductsBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
 
 
 .titleSection{
-    margin: 8em 7em 3em;
+    margin: 8em 4.9em 3em;
     font-size: 1.5em;
     color: var(--black-clr);
   }
@@ -25,21 +25,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 7.7%;
-    margin-bottom: 2em;
+    gap: 4em;
+    margin-bottom: 1em;
   }
 
   .cartImg{
-    width: 290px;
-    height: 390px;
+    width: 130px;
+    height: 170px;
     border-radius: 5px;
   }
 
   .cartText{
     text-align: center;
     color: var(--black-clr);
-    font-size: 1.2em;
-    max-width: 200px;
+    font-size: 1em;
+    max-width: 150px;
   }
 
   .titleAccent{
@@ -55,32 +55,7 @@
   .cartDeleteBtn:hover{
     transform: scale(1.1);
   }
-
-  .cartFinishBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2em;
-    margin: 3em 11em 4em;
-  }
-
-  .cartDeleteAll{
-    color: var(--black-clr);
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-
-  .cartDeleteAll:hover{
-    color: red;
-  }
-
-  .cartTotal{
-    color: var(--black-clr);
-    font-size: 1.5em;
-    text-align: right;
-  }
-
+  
   .emptyCartBox{
     display: flex;
     flex-direction: column;
@@ -95,3 +70,13 @@
     color: var(--black-clr);
   }
 
+  .cartFormFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:flex-start;
+  }
+
+  .backBtn{
+    color: var(--black-clr);
+  }

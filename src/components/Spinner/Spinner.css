@@ -1,4 +1,5 @@
 .spinnerBox{
+    margin: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;

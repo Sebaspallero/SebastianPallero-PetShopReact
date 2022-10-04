@@ -1,14 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import { fetchData } from '../../products'
+
 
 //FIREBASE
 import { getFirestore,getDoc,doc } from "firebase/firestore"
 
-
-
 const ItemDetailContainer = () => {
+
   const [product,setProduct]= useState([])
 
   const {id} = useParams();
@@ -17,8 +16,8 @@ const ItemDetailContainer = () => {
     const querydb = getFirestore();
     const querydoc = doc(querydb, 'products', id);
     getDoc(querydoc)
-      .then(res=> setProduct({id:res,id, ...res.data()}))
-  },[id])
+      .then(res=> setProduct({id:res.id, ...res.data()}))
+  },[])
   
   return (
           <div>
