@@ -1,10 +1,21 @@
--Proyecto de React, E-commerce de un Pet-Shop, realizado por Sebastián Pallero.
--Se utilizó CSS nativo para los estilos, con un diseño de la web original.
--Se instaló FontAwesome para los iconos. 
--La idea del proyecto era crear una web rapida, moderna y vistosa, utilizando React para lograr el objetivo de 
-realizar una SPA, dandole la mayor cantidad de funcionaldades reales al proyetco, con el uso de APIS y librerias.
+# Patitas - React.js E-Commerce 
 
-# Getting Started with Create React App
+**Proyecto de React, E-commerce de un Pet-Shop, realizado por Sebastián Pallero**
+
+![Imagen de Portada](https://firebasestorage.googleapis.com/v0/b/react-patitas.appspot.com/o/Patitas-Portada.png?alt=media&token=7e1a4953-f5f2-4982-b93f-72a89cacc439)
+
+-Se utilizó CSS nativo para los estilos, con un diseño de la web original.
+
+-Se instaló FontAwesome para los iconos. 
+
+-La idea del proyecto era crear una web rapida, moderna y vistosa, utilizando React para lograr el objetivo de 
+realizar una SPA, dandole la mayor cantidad de funcionaldades reales al proyetco.
+
+###### Para ver el Deploy de la web haz click en el siguiente link => [Patitas](https://634b25517f368e72f44fb2d7--genuine-ganache-ee5a3d.netlify.app/)
+
+<------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
