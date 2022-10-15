@@ -14,11 +14,11 @@ const Footer = () => {
       </div>
     <div className='footerBox'>
         <ul className='socialBox'>
-            <a href='https://twitter.com/' target="_blank" className='socialItem'><FontAwesomeIcon className='brandFooter' icon={faTwitter} />Twitter</a>
-            <a href='https://es-la.facebook.com/' target="_blank" className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faFacebookF} /> Facebook</a>
-            <a href='https://www.instagram.com/' target="_blank" className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faInstagram} />Instagram</a>
-            <a href='https://www.linkedin.com/in/sebastian-pallero-or%C3%ADa-a911591a1/' target="_blank"  className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faLinkedin} />Linkedin</a>
-            <a href='https://github.com/Sebaspallero' target="_blank"  className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faGithub} />GitHub</a>
+            <a href='https://twitter.com/' target="_blank" rel="noreferrer" className='socialItem'><FontAwesomeIcon className='brandFooter' icon={faTwitter} />Twitter</a>
+            <a href='https://es-la.facebook.com/' target="_blank" rel="noreferrer" className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faFacebookF} /> Facebook</a>
+            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faInstagram} />Instagram</a>
+            <a href='https://www.linkedin.com/in/sebastian-pallero-or%C3%ADa-a911591a1/' target="_blank" rel="noreferrer"  className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faLinkedin} />Linkedin</a>
+            <a href='https://github.com/Sebaspallero' target="_blank" rel="noreferrer"  className='socialItem'><FontAwesomeIcon  className='brandFooter' icon={faGithub} />GitHub</a>
         </ul>
     </div>
     </div>

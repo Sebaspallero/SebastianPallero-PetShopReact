@@ -8,7 +8,7 @@ const Hero = () => {
             <h2 className='greetingText'><span className='clrAccent'>Hola</span> bienvenido a nuestro Pet Shop</h2>
             <a href='#productos' className='btn'>Comprar</a>
         </div>
-        <img src='/assets/waves.svg' className='wavesHero'></img>
+        <img src='/assets/waves.svg' className='wavesHero' alt='separador'></img>
     </section>
   )
 }

@@ -8,7 +8,7 @@ const About = () => {
         <div className='aboutInfoBox'>
             <h2 className='titleSectionAbout'>Sobre <span className='titleAccent'>Nosotros</span></h2>
             <p className='infoSection'>Patitas es un servicio de comida para mascotas premium. Nuestros productos se basan en ofrecer alimentos organicos y libres de conservantes al mejor precio posible para nuestros clientes.</p>
-            <a href='https://github.com/Sebaspallero' target="_blank"  className='btn'>Conocer Más</a>
+            <a href='https://github.com/Sebaspallero' target="_blank" rel="noreferrer"  className='btn'>Conocer Más</a>
         </div>
     </div>
   )
