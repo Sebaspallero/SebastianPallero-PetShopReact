@@ -6,16 +6,10 @@ import { faDog,faCat, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './ItemListContainer.css'
 
 
-const Brand = ({name})=>{
-    return(
-        <p className='brandName'>{name}</p>
-    )
-}
-
 const ItemListContainer = () => {
   return (
     <div id='productos' style={{paddingTop:'20px'}}>
-        <h2 className='ItemGreeting'>Nuestros <Brand name="Productos"/></h2>
+        <h2 className='ItemGreeting'>Nuestros <span className='brandName'>Productos</span></h2>
         <div className='categorySelectorBox'>
           <Link to='/' className="btn"> TODO <FontAwesomeIcon  icon={faShoppingCart} /></Link>
           <Link to='/categoria/perros' className="btn"> PERROS <FontAwesomeIcon  icon={faDog} /></Link>

@@ -67,3 +67,11 @@
     margin: 1em 0em 1em;
     text-align: right;
   }
+
+  .alertTitle{
+    color: var(--black-clr);
+  }
+
+  .alertText{
+    color: var(--light-clr);
+  }

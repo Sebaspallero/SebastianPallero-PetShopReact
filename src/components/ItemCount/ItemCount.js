@@ -1,14 +1,21 @@
 import React, {useState} from 'react'
+import Alert from '@mui/material/Alert';
 import './ItemCount.css'
 
 
 const ItemCount = ({stock,initial,onAdd}) => {
     
     const[value,setValue] = useState(initial);
+    const [stockMessage, setStockMessage] = useState(false)
 
     const add=()=>{
         if(value < stock) setValue(value+1)
-        else alert("Se alcanzó el limite de compra")
+        else{
+            setStockMessage(true)
+            setTimeout(()=>{
+                setStockMessage(false)
+            },4000)
+        }
     };
 
     const substract=()=>{
@@ -28,6 +35,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
                 <button className='btnsAdd' onClick={add}>+</button>
             </div>
             <button onClick={quantity} className='btn'>Agregar al carrito</button>
+            {stockMessage ? <Alert className='alertMessage' severity="warning">Alcanzaste el limite!</Alert> : null}
         </div>
         
       )

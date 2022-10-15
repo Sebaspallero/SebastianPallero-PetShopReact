@@ -18,9 +18,7 @@ const ItemDetail = ({data}) => {
 
   return (
     <div className='itemDetailBox'>
-        <div>
-            <img src={data.img_url} className='itemDetailImg' alt="Imagen de producto"></img>
-        </div>
+        <img src={data.img_url} className='itemDetailImg' alt="Imagen de producto"></img>
         <div className='ItemDetailTextBox'>
             <h2 className='itemDetailTitle'>{data.title}</h2>
             <p className='itemDetailPrice'>${data?.price?.toLocaleString() || ''}</p>

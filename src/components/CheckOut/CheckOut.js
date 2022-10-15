@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {useNavigate} from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext'
+import Swal from 'sweetalert2'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash} from '@fortawesome/free-solid-svg-icons'
 import './CheckOut.css'
@@ -22,11 +23,12 @@ const CheckOut = () => {
     phone:'',
     items: cart.map(product=>({id:product.id,title:product.title,price:product.price,quantity:product.quantity})),
     date: Date(),
-    total: totalPrice(cart)
+    total: totalPrice(cart).toLocaleString()
   }
 
+
+
   const [values, setValues] = useState(initialState);
-	const [purchaseID, setPurchaseID] = useState('');
 
   const handleOnChange = (e) => {
 		const { value, name } = e.target;
@@ -39,16 +41,43 @@ const CheckOut = () => {
       const docRef = await addDoc(collection(db, 'purchases'), {
         values,
       });
-      setPurchaseID(docRef.id);
       setValues(initialState);
-      alert(`Su orden a sido completada con Éxito. Este es su código de compra ${docRef.id}`)
-      navigate('/');
-      clearCart()
+      setTimeout(()=>{
+        Swal.fire({
+          title: 'Tu compra ha sido realizada!',
+          text: `Esté es tu código de compra: ${docRef.id}`,
+          icon: 'success',
+          confirmButtonColor:'#e67e22',
+          confirmButtonText: 'Volver al Inicio',
+          allowOutsideClick:false,
+          customClass:{
+              title: 'alertTitle',
+              text:'alertText',
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            clearCart();
+            navigate('/')
+          }
+        })
+      },2000);
     }
     else{
-      alert('Debe completar todos los campos del formulario')
+      Swal.fire({ 
+        position: 'bottom-start',
+        icon: 'warning',
+        text: 'Debes completar todos los campos',
+        showConfirmButton: false,
+        allowOutsideClick:true,
+        backdrop:true,
+        timer: 2000,
+        customClass:{
+            title: 'alertTitle',
+        }
+      })
     }
 	};
+
 
   return (
     <div className='checkOutBox'>

@@ -21,7 +21,7 @@ const CartProvider= ({children}) => {
     };
 
     const totalPrice = (products)=>{
-       const newTotal = products.reduce((total,item)=>total+(item.quantity*item.price),0);
+       const newTotal = products.reduce((total,item)=>total+(item.quantity*item.price),0)
        setTotal(newTotal)
        return(total)
     }

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const CartWindow = () => {
 
-  let { cart, totalPrice,removeProduct, clearCart } = useCartContext()
+  const { cart, totalPrice,removeProduct, clearCart } = useCartContext()
   
   return (
     <div className='cartViewBox'>
@@ -24,7 +24,7 @@ const CartWindow = () => {
                             <p className='cartViewText'>${product.price.toLocaleString()}</p>
                           </div>
                           <p>x {product.quantity}</p>
-                          <span className='cartViewDeleteBtn' onClick={()=>removeProduct(product.id)}><FontAwesomeIcon icon={faXmark} /></span>
+                          <span className='cartViewDeleteBtn' onClick={()=> removeProduct(product.id)}><FontAwesomeIcon icon={faXmark} /></span>
                         </div>
                       )})}
                       <p style={{marginBottom:'30px'}}>Total: ${totalPrice(cart).toLocaleString()}</p>

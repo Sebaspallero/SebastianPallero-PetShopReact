@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 //COMPONENTS
 import NavBar from './components/NavBar/NavBar.js';
@@ -18,7 +18,6 @@ import Cart from './views/Cart/Cart';
 
 
 const App = () => {
-
   return (
     <Router>
       <div className="App">
@@ -38,3 +37,7 @@ const App = () => {
 }
 
 export default App;
+
+
+
+

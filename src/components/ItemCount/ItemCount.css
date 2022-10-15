@@ -22,4 +22,19 @@
     border: 2px solid var(--black-clr);
     background-color: var(--white-clr);
   }
+  
+  .alertMessage{
+    margin-top: 1em;
+  }
 
+  @media (max-width: 600px){
+
+    .counterBox{
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      padding-left: 0em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
