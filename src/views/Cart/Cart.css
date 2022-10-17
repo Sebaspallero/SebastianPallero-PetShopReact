@@ -80,13 +80,3 @@
   .backBtn{
     color: var(--black-clr);
   }
-
-  @media (max-width: 600px){
-    .cartFormFlex{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items:flex-start;
-    }
-  
-  }

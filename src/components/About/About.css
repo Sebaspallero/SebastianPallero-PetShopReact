@@ -29,34 +29,3 @@
     width: 450px;
 }
 
-/* ------------------------- MEDIA QUERY ------------------------------------ */
-
-@media (max-width: 600px){
-
-.aboutBox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5em;
-}
-
-.infoSection{
-  color: var(--light-clr);
-  padding-bottom: 1em;
-  text-align: center;
-}
-
-.aboutInfoBox{
-  margin-left: 2.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.aboutImg{
-  width: 280px;
-  height: 240px;
-}
-
-}

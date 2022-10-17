@@ -21,15 +21,4 @@
     gap: 2em;
   }
   
-  /* ------------------------- MEDIA QUERY ------------------------------------ */
-
-@media (max-width: 600px){
-
-    .categorySelectorBox{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-      }
-}
+  
